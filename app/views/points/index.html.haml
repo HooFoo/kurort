@@ -1,0 +1,37 @@
+%h1 Listing points
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Name
+      %th Lng
+      %th Lat
+      %th Open
+      %th Close
+      %th Extra
+      %th Image
+      %th Lang
+      %th
+      %th
+      %th
+
+  %tbody
+    - @points.each do |point|
+      %tr
+        %td= point.user
+        %td= point.name
+        %td= point.lng
+        %td= point.lat
+        %td= point.open
+        %td= point.close
+        %td= point.extra
+        %td= point.image
+        %td= point.lang
+        %td= link_to 'Show', point
+        %td= link_to 'Edit', edit_point_path(point)
+        %td= link_to 'Destroy', point, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Point', new_point_path

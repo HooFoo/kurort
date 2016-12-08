@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  lng: 1.5
+  lat: 1.5
+  open: 2016-12-07 13:43:15
+  close: 2016-12-07 13:43:15
+  extra: 
+  image: MyString
+  lang: MyString
+
+two:
+  user: two
+  name: MyString
+  lng: 1.5
+  lat: 1.5
+  open: 2016-12-07 13:43:15
+  close: 2016-12-07 13:43:15
+  extra: 
+  image: MyString
+  lang: MyString

@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @point.user
+%p
+  %b Name:
+  = @point.name
+%p
+  %b Lng:
+  = @point.lng
+%p
+  %b Lat:
+  = @point.lat
+%p
+  %b Open:
+  = @point.open
+%p
+  %b Close:
+  = @point.close
+%p
+  %b Extra:
+  = @point.extra
+%p
+  %b Image:
+  = @point.image
+%p
+  %b Lang:
+  = @point.lang
+
+= link_to 'Edit', edit_point_path(@point)
+\|
+= link_to 'Back', points_path
