@@ -1,11 +1,15 @@
 (->
-  UIController = ()->
+  UIController = ($scope, $timeout, $mdSidenav)->
 
     @heading_text = 'Kurort'
     @currentSlide = 'kek'
 
-    @sendMessage = ()=>
-      @stuff
+    buildToggler = (componentId) ->
+      () ->
+        $mdSidenav(componentId).toggle();
+
+    @toggleLeft = buildToggler('left');
+    @toggleRight = buildToggler('right');
 
     return
 

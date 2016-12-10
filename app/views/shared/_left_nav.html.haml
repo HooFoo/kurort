@@ -1,0 +1,16 @@
+%md-sidenav.md-sidenav-left{'md-component-id'=>"left",
+                            'md-is-locked-open'=>"$mdMedia('gt-md')",
+                            'md-disable-backdrop'=>"",
+                            'md-whiteframe'=>"4"}
+
+  %md-content{'layout-padding'=>true}
+    %md-card.md-theme-indigo
+      =render partial: 'widgets/user'
+    %md-list
+      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
+        %p Поиск
+      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
+        %p Карта
+      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
+        %p Чат
+    %p{hide:true, 'show-gt-md':true}

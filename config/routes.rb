@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  namespace :users, defaults: {format: :json} do
+    get 'current'
+    get 'show'
+  end
+
   root 'index#index'
 
   get 'index/index'

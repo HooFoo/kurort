@@ -1,0 +1,10 @@
+%div.user-widget{ng: {controller: 'Users as user'}}
+  %h2 {{ user.data.username }}
+  %div.logged-user{ng: {show:'user.data.logged'}}
+
+  %div.login-form{ng: {hide:'user.data.logged'}}
+  =form_for @user, url: new_user_session_path do |f|
+    =f.text_field :username
+    =f.password_field :password
+
+    =f.submit t('login'), class: " md-raised md-primary md-button md-ink-ripple"

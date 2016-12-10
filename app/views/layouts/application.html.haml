@@ -3,9 +3,12 @@
   %head
     %title Kurort
     = csrf_meta_tags
-
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body{'ng-app' => 'app'}
-    %ui-view
+  %body.layout-row{layout:'row','ng-app' => 'app', ng: {controller: 'UI as ui'}}
+    =render partial: 'shared/left_nav'
+    =render partial: 'shared/right_bar'
+    %ui-view.layout-column.flex{layout:"column"}
       = yield

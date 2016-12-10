@@ -14,7 +14,7 @@ class Auth::SessionsController < Devise::SessionsController
 
     if self.resource
       sign_in(resource_name, self.resource)
-      render json: {msg: "Successfully Signed In"}
+      render json: current_user.to_json
     else
       render json: {msg: I18n.t('devise.failure.not_found_in_database', authentication_keys: 'email')}, status: 401
     end

@@ -148,6 +148,40 @@ angular.module("oxymoron.config.states", [])
           }
         })
       
+        .state('users_current_path', {
+          url: '/users/current',
+          
+          templateUrl: function(params) {
+            params['ng-view']='';
+            
+            
+            return Routes['users_current_path'](params);
+          },
+          controller: 'UsersCtrl as ctrl',
+          resolve: {
+            action: ['$stateParams', function ($stateParams) {
+              return resolve('current', $stateParams)
+            }]
+          }
+        })
+      
+        .state('users_show_path', {
+          url: '/users/show',
+          
+          templateUrl: function(params) {
+            params['ng-view']='';
+            
+            
+            return Routes['users_show_path'](params);
+          },
+          controller: 'UsersCtrl as ctrl',
+          resolve: {
+            action: ['$stateParams', function ($stateParams) {
+              return resolve('show', $stateParams)
+            }]
+          }
+        })
+      
         .state('root_path', {
           url: '/',
           
@@ -483,6 +517,28 @@ angular.module("oxymoron.services.resources", [])
   }])
 
   
+    .factory('UsersShow', ['$resource', 'resourceDecorator', function ($resource, resourceDecorator) {
+      return resourceDecorator($resource('/users/show.json', {}, {
+        "new": {
+          "method": "GET",
+          "url": "/users/show/new.json"
+        },
+        "edit": {
+          "method": "GET",
+          "url": "/users/show/edit.json"
+        },
+        "update": {
+          "method": "PUT"
+        },
+        "create": {
+          "method": "POST"
+        },
+        "destroy": {
+          "method": "DELETE"
+        }
+      }));
+    }])
+  
     .factory('Comment', ['$resource', 'resourceDecorator', function ($resource, resourceDecorator) {
       return resourceDecorator($resource('/comments/:id.json', {"id":"@id"}, {
         "new": {
@@ -777,7 +833,7 @@ angular.module("oxymoron.directives", ['oxymoron.directives.fileupload', 'oxymor
 (function () {
   var Routes = function () {
     var self = this,
-        routes = {"rails_info_properties":{"defaults":{},"path":"/rails/info/properties"},"rails_info_routes":{"defaults":{},"path":"/rails/info/routes"},"rails_info":{"defaults":{},"path":"/rails/info"},"rails_mailers":{"defaults":{},"path":"/rails/mailers"},"root":{"defaults":{},"path":"/"},"index_index":{"defaults":{},"path":"/index/index"},"comments":{"defaults":{},"path":"/comments"},"new_comment":{"defaults":{},"path":"/comments/new"},"edit_comment":{"defaults":{},"path":"/comments/:id/edit"},"comment":{"defaults":{},"path":"/comments/:id"},"points":{"defaults":{},"path":"/points"},"new_point":{"defaults":{},"path":"/points/new"},"edit_point":{"defaults":{},"path":"/points/:id/edit"},"point":{"defaults":{},"path":"/points/:id"},"new_user_session":{"defaults":{},"path":"/users/sign_in"},"user_session":{"defaults":{},"path":"/users/sign_in"},"destroy_user_session":{"defaults":{},"path":"/users/sign_out"},"user_password":{"defaults":{},"path":"/users/password"},"new_user_password":{"defaults":{},"path":"/users/password/new"},"edit_user_password":{"defaults":{},"path":"/users/password/edit"},"cancel_user_registration":{"defaults":{},"path":"/users/cancel"},"user_registration":{"defaults":{},"path":"/users"},"new_user_registration":{"defaults":{},"path":"/users/sign_up"},"edit_user_registration":{"defaults":{},"path":"/users/edit"}};
+        routes = {"rails_info_properties":{"defaults":{},"path":"/rails/info/properties"},"rails_info_routes":{"defaults":{},"path":"/rails/info/routes"},"rails_info":{"defaults":{},"path":"/rails/info"},"rails_mailers":{"defaults":{},"path":"/rails/mailers"},"users_current":{"defaults":{},"path":"/users/current"},"users_show":{"defaults":{},"path":"/users/show"},"root":{"defaults":{},"path":"/"},"index_index":{"defaults":{},"path":"/index/index"},"comments":{"defaults":{},"path":"/comments"},"new_comment":{"defaults":{},"path":"/comments/new"},"edit_comment":{"defaults":{},"path":"/comments/:id/edit"},"comment":{"defaults":{},"path":"/comments/:id"},"points":{"defaults":{},"path":"/points"},"new_point":{"defaults":{},"path":"/points/new"},"edit_point":{"defaults":{},"path":"/points/:id/edit"},"point":{"defaults":{},"path":"/points/:id"},"new_user_session":{"defaults":{},"path":"/users/sign_in"},"user_session":{"defaults":{},"path":"/users/sign_in"},"destroy_user_session":{"defaults":{},"path":"/users/sign_out"},"user_password":{"defaults":{},"path":"/users/password"},"new_user_password":{"defaults":{},"path":"/users/password/new"},"edit_user_password":{"defaults":{},"path":"/users/password/edit"},"cancel_user_registration":{"defaults":{},"path":"/users/cancel"},"user_registration":{"defaults":{},"path":"/users"},"new_user_registration":{"defaults":{},"path":"/users/sign_up"},"edit_user_registration":{"defaults":{},"path":"/users/edit"}};
 
     self.defaultParams = {}
 

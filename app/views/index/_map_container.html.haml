@@ -1,1 +1,2 @@
-%div#map
+%div#map{ng: {controller: 'MapController as map'}}
+  %ui-gmap-google-map{center:'map.center',zoom:'map.zoom'}

@@ -1,4 +1,4 @@
-angular.module('app')
+window.app
 .config(['$stateProvider', ($stateProvider) ->
   $stateProvider.rails()
 ])

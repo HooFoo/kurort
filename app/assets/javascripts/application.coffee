@@ -24,12 +24,22 @@
 #= require angular-cookies
 #= require angular-animate
 #= require angular-aria
-#= require oxymoron
 #= require angular-ui
+#= require angular-google-maps
+#= require angular-simple-logger
+#= require angular-material-icons
+#= require oxymoron
+#= require vars
 #= require_self
 #= require_tree .
 
 
 console.log 'loading...'
-window.app = angular.module('app', ['ui.router', 'oxymoron','ngMaterial']);
+window.app = angular.module('app', ['ui.router', 'oxymoron','ngMdIcons','ngAnimate','ngMaterial','uiGmapgoogle-maps']);
+window.app.config((uiGmapGoogleMapApiProvider) ->
+  uiGmapGoogleMapApiProvider.configure
+    key: vars.maps_api_key
+    v: '3.26'
+    libraries: 'weather,geometry,visualization'
+)
 console.log 'Loaded! '

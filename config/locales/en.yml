@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  username: "User name"
+  password: "Password"
+  login: "Login or sign up"

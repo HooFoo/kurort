@@ -37,7 +37,9 @@ gem 'rails-angular-material'
 gem 'bootstrap'
 gem 'tether-rails'
 gem 'angular-ui-rails'
-gem 'bower-rails', '~> 0.11.0'
+gem 'bower'
+gem 'angular-material-icons-rails', git: 'git@github.com:Rezonans/angular-material-icons-rails.git'
+
 
 
 gem 'pg'
