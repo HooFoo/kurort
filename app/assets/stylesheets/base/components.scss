@@ -1,1 +1,78 @@
-.angular-google-map-container { height: calc(100vh - 56px); }
+.angular-google-map-container {
+  height: calc(100vh - 56px);
+}
+
+//left menu
+.nav-header {
+  background-color: #3F51B5;
+  border-bottom: 1px solid #3F51B5;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.left-menu > li {
+  border-bottom: 1px solid #5C6BC0;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.87);
+  margin: 0;
+  border-radius: 0px;
+  background: #3F51B5;
+}
+ul li {
+  padding: 0;
+  margin-top: 3px;
+  list-style-position: inside;
+}
+.left-menu {
+  list-style: none;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.nav-item {
+  width: 100%;
+  margin: 0;
+  display: flex;
+}
+.nav-items-icon {
+  margin: 5px 5px;
+}
+.nav-subcat {
+  background: white;
+  padding-left: 10px;
+}
+.subcat{
+  color: black;
+  text-align: left;
+  text-transform: none;
+}
+.adwords-area {
+  width: 100%;
+  height: 100%;
+  color: rgba(100, 100, 100, 0.2);
+  text-align: center;
+  vertical-align: middle;
+}
+.search-box {
+  height: 31px !important;
+
+  > md-autocomplete-wrap {
+
+    > md-input-container {
+      margin: 0px;
+      padding: 0px;
+
+      > input {
+
+      }
+    }
+  }
+}
+.search-wrapper {
+  padding-top: 10px;
+}
+md-icon.search {
+  margin: 5px 5px 2px 11px;
+}
+.autocomplete-item {
+  color: black;
+}

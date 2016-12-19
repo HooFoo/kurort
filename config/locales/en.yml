@@ -24,3 +24,13 @@ en:
   username: "User name"
   password: "Password"
   login: "Login or sign up"
+  user_position: "Your position"
+  chat:
+    title: "Chat"
+  map:
+    title: "Map"
+    elements:
+      current: "My position"
+      add: "Add point"
+  search:
+    placeholder: "Search"

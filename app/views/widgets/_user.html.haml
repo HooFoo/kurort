@@ -1,10 +1,12 @@
-%div.user-widget{ng: {controller: 'Users as user'}}
-  %h2 {{ user.data.username }}
+%md-content.user-widget{ng: {controller: 'Users as user'}}
   %div.logged-user{ng: {show:'user.data.logged'}}
-
+    %md-card{'md-theme':"indigo",'md-colors':"::{backgroundColor: 'indigo-primary-700'}"}
+      %md-card-title
+        %md-card-title-media
+          %div.md-media-sm.card-media{layout:true,'md-colors':"::{background: 'indigo-accent'}"}
+            %md-icon{'md-svg-icon':"icons/account_circle.svg"}
+        %md-card-title-text
+          %span.md-headline {{user.data.username}}
+          %span.md-subhead.description This card is colored according the {{theme}} theme</span>
   %div.login-form{ng: {hide:'user.data.logged'}}
-  =form_for @user, url: new_user_session_path do |f|
-    =f.text_field :username
-    =f.password_field :password
-
-    =f.submit t('login'), class: " md-raised md-primary md-button md-ink-ripple"
+    =render partial: 'users/sessions/new'

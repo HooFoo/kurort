@@ -1,0 +1,9 @@
+=form_for @user, url: new_user_session_path, html: {class: 'user-form'} do |f|
+  =f.text_field :username, class: 'user-form-input',
+                           'ng-change':'ui.checkForm()',
+                           required: true
+  =f.password_field :password, class: 'user-form-input',
+                               'ng-change':'ui.checkForm()',
+                               required: true
+
+  =f.submit t('login'), 'ng-class': "{ 'form-filled' : ui.isFormComplete }" , class: " md-raised md-primary md-button md-ink-ripple sign-up-submit"

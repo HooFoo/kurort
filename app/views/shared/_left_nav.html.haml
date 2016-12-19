@@ -3,14 +3,33 @@
                             'md-disable-backdrop'=>"",
                             'md-whiteframe'=>"4"}
 
-  %md-content{'layout-padding'=>true}
-    %md-card.md-theme-indigo
-      =render partial: 'widgets/user'
-    %md-list
-      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
-        %p Поиск
-      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
-        %p Карта
-      %md-list-item.md-button-wrap.md-clickable{ng: { click: '' }}
-        %p Чат
-    %p{hide:true, 'show-gt-md':true}
+  %header.nav-header
+    =render partial: 'widgets/user'
+  %md-content
+    %ul.left-menu.layout-column{layout:'column'}
+
+      %li.parent-list-item
+        =render partial: 'shared/search_box'
+
+      %li.parent-list-item
+        %span.nav-item.md-button
+          %div.flex{layout:'row',flex:true}
+            %md-icon.nav-items-icon{'md-svg-icon': 'icons/map.svg'}
+            = t 'map.title'
+          %span.flex{flex:true}
+          %span.md-toggle-icon.toggled
+            %md-icon{'md-svg-icon': 'icons/expand_more.svg'}
+        %ul.menu-toggle-list.nav-subcat{layout:'column'}
+          =render partial: 'shared/nav_components/map_elements'
+
+      %li.parent-list-item
+        %span.nav-item.md-button
+          %div.flex{layout:'row',flex:true}
+            %md-icon.nav-items-icon{'md-svg-icon': 'icons/chat.svg'}
+            = t 'chat.title'
+          %span.flex{flex:true}
+          %span.md-toggle-icon.toggled
+            %md-icon{'md-svg-icon': 'icons/expand_more.svg'}
+
+    %div.adwords-area
+      GOOGLE ADSENSE
