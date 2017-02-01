@@ -1,10 +1,8 @@
-(->
-  CommentsController = (Comment, action)->
-    @sendMessage = ()=>
-      @stuff
+CommentsController = (Comment, action)->
+  @sendMessage = ()=>
+    @stuff
 
-    return
+  return
 
-  window.app
-  .controller('Comments', CommentsController,['Comment','action'])
-)()
+window.app
+.controller('Comments', CommentsController, ['Comment', 'action'])

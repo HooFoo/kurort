@@ -1,10 +1,8 @@
-(->
-  PointsController = (Point, action)->
-    @sendMessage = ()=>
-      @stuff
+PointsController = (Point, action)->
+  @sendMessage = ()=>
+    @stuff
 
-    return
+  return
 
-  window.app
-  .controller('PointsCtrl', PointsController,['Point','action'])
-)()
+window.app
+.controller('PointsCtrl', PointsController, ['Point', 'action'])

@@ -1,9 +1,6 @@
-(->
-  IndexController = ()->
+IndexController = ()->
 
-    @index = () =>
-      console.log('Yoay!')
+  @index = () =>
+    console.log('Yoay!')
 
-  window.app
-  .controller('IndexCtrl', IndexController, [])
-)()
+window.app.controller('IndexCtrl', IndexController, [])

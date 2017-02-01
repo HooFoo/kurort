@@ -1,21 +1,19 @@
-(->
-  SearchController = ()->
+SearchController = ()->
 
-    @noCache = false
-    @selectedItem = null
-    @searchText = null
-    @items = []
+  @noCache = false
+  @selectedItem = null
+  @searchText = null
+  @items = []
 
-    @querySearch = (text) =>
-      [{display:text}]
+  @querySearch = (text) =>
+    [{display:text}]
 
-    init = =>
-      return
-
-    init();
-
+  init = =>
     return
 
-  window.app
-  .controller('SearchCtrl', SearchController)
-)()
+  init();
+
+  return
+
+window.app
+.controller('SearchCtrl', SearchController)

@@ -1,5 +1,5 @@
-%md-content.user-widget{ng: {controller: 'Users as user'}}
-  %div.logged-user{ng: {show:'user.data.logged'}}
+.user-widget{ng: {controller: 'Users as user'}}
+  .logged-user{ng: {show: 'user.data.logged'}}
     %md-card{'md-theme':"indigo",'md-colors':"::{backgroundColor: 'indigo-primary-700'}"}
       %md-card-title
         %md-card-title-media
@@ -8,5 +8,5 @@
         %md-card-title-text
           %span.md-headline {{user.data.username}}
           %span.md-subhead.description This card is colored according the {{theme}} theme</span>
-  %div.login-form{ng: {hide:'user.data.logged'}}
+  .login-form{ng: {hide:'user.data.logged'}}
     =render partial: 'users/sessions/new'

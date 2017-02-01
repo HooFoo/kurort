@@ -1,15 +1,6 @@
-%div.search-wrapper{'ng-controller':'SearchCtrl as search', flex:true, layout:'row'}
-  %md-icon.search{'md-svg-src':'icons/search.svg'}
-  %md-autocomplete.search-box{flex:true,
-    'md-input-name':"searchField",
-    'md-input-minlength':"2",
-    'md-no-cache':"search.noCache",
-    'md-selected-item':"search.selectedItem",
-    'md-search-text':"search.searchText",
-    'md-items':"item in search.querySearch(search.searchText)",
-    'md-item-text':"item.display",
-    'md-require-match':true,
-    'md-floating-label': t('search.placeholder')}
-    %md-item-template
-      %span.autocomplete-item{'md-highlight-text':"search.searchText"} {{item.display}}
+.container
+  .row
+    .col.s12.search-wrapper{'ng-controller':'SearchCtrl as search', flex: true, layout: 'row'}
+      %i.material-icons search
+      %input.search-box{ name: 'searchField' }
 

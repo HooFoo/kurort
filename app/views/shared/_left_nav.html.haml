@@ -1,11 +1,7 @@
-%md-sidenav.md-sidenav-left{'md-component-id'=>"left",
-                            'md-is-locked-open'=>"$mdMedia('gt-md')",
-                            'md-disable-backdrop'=>"",
-                            'md-whiteframe'=>"4"}
-
+%ul#nav-mobile.side-nav.fixed
   %header.nav-header
     =render partial: 'widgets/user'
-  %md-content
+  .content
     %ul.left-menu.layout-column{layout:'column'}
 
       %li.parent-list-item

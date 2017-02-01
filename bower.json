@@ -6,7 +6,6 @@
   "dependencies": {
     "angular-google-maps": "2.4.0",
     "angular-simple-logger": "0.1.7",
-    "material-design-icons": "3.0.1",
-    "browser-sync" : "50.0.0"
+    "material-design-icons": "3.0.1"
   }
 }

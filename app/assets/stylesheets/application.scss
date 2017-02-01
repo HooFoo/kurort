@@ -12,11 +12,14 @@
  */
 
 @import "oxymoron/ng-notify";
-@import "angular-material";
+@import "materialize/components/color";
+$primary-color: #3F51B5;
+@import "materialize";
 @import "angular-ui";
 @import "tether";
 @import "bootstrap";
 @import "base/*";
+@import "users";
 
 $small: 320px;
 $large: 1024px;
