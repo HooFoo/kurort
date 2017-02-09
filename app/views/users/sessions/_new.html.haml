@@ -1,6 +1,4 @@
 = simple_form_for @user, url: new_user_session_path, html: {class: 'user-form', 'ng-submit': 'ui.submitForm()'} do |f|
-  .input-field
-    =f.input :username, class: 'user-form-input', 'ng-change': 'ui.checkForm()'
-  .input-field
-    =f.input :password, class: 'user-form-input', 'ng-change': 'ui.checkForm()'
+  =f.input :username, class: 'user-form-input', 'ng-change': 'ui.checkForm()'
+  =f.input :password, class: 'user-form-input', 'ng-change': 'ui.checkForm()'
   =f.submit t('login'), 'ng-class': '{ "form-filled" : ui.isFormComplete }' , class: 'btn'

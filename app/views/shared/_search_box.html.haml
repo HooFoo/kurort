@@ -1,6 +1,5 @@
-.container
-  .row
-    .col.s12.search-wrapper{'ng-controller':'SearchCtrl as search', flex: true, layout: 'row'}
-      %i.material-icons search
-      %input.search-box{ name: 'searchField' }
+.row
+  .col.s12.search-wrapper{'ng-controller':'SearchCtrl as search', flex: true, layout: 'row'}
+    %ng-md-icon.search{ icon: 'search', style: 'fill: white' }
+    %input.search-box{ name: 'searchField' }
 

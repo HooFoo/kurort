@@ -1,6 +1,9 @@
-%li.subcat.md-button
-  %md-icon{'md-svg-icon':'icons/my_location.svg'}
-  = t 'map.elements.current'
-%li.subcat.md-button
-  %md-icon{'md-svg-icon':'icons/add_location.svg'}
-  = t 'map.elements.add'
+%ul
+  %li
+    %a{ href: '#' }
+      %ng-md-icon{icon: 'my_location'}
+      = t 'map.elements.current'
+  %li
+    %a{ href: '#' }
+      %ng-md-icon{icon: 'add_location'}
+      = t 'map.elements.add'

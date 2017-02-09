@@ -14,7 +14,6 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require tether
-#= require bootstrap
 #= require oxymoron/underscore
 #= require angular
 #= require oxymoron/angular-resource
