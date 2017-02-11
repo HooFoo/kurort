@@ -9,13 +9,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body.layout-row{layout:'row','ng-app' => 'app', ng: {controller: 'UI as ui'}}
     %header
-      .navbar-fixed
-        %nav
-          .container
-            .nav-wrapper
-              %a.button-collapse.top-nav.full.hide-on-large-only{ href: '#', data: { activates: 'nav-mobile' } }
-                %i.material-icons menu
-              %a.page-title Kurort
+      %nav.top-nav
+        .container
+          .nav-wrapper
+            %a.button-collapse.top-nav.full.hide-on-large-only{ href: '#', data: { activates: 'nav-mobile' } }
+              %i.material-icons menu
+            %a.page-title Kurort
+      .container
+
       = render partial: 'shared/left_nav'
     -#=render partial: 'shared/right_bar'
     .layout-column.flex{layout:"column"}
