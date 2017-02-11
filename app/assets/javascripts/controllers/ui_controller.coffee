@@ -24,4 +24,4 @@ UIController = ($mdSidenav)->
 
   return
 
-window.app.controller('UI', [UIController])
+@app.controller('UIController', [UIController])

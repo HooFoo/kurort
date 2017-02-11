@@ -4,5 +4,5 @@ PointsController = (Point, action)->
 
   return
 
-window.app
-.controller('PointsCtrl', PointsController, ['Point', 'action'])
+@app
+.controller('PointsController', PointsController, ['Point', 'action'])

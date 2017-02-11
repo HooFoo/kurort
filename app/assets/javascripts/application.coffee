@@ -34,8 +34,8 @@
 
 
 console.log 'loading...'
-window.app = angular.module('app', ['ui.router', 'oxymoron', 'ngMdIcons', 'ngAnimate', 'uiGmapgoogle-maps']);
-window.app.config((uiGmapGoogleMapApiProvider) ->
+@app = angular.module('app', ['ui.router', 'oxymoron', 'ngMdIcons', 'ngAnimate', 'uiGmapgoogle-maps']);
+@app.config((uiGmapGoogleMapApiProvider) ->
   uiGmapGoogleMapApiProvider.configure
     key: vars.maps_api_key
     v: '3.26'

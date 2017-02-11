@@ -39,5 +39,5 @@ MapController = ($scope,uiGmapGoogleMapApi)->
 
   return
 
-window.app
+@app
 .controller('MapController', ['$scope', 'uiGmapGoogleMapApi', MapController])
