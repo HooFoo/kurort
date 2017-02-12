@@ -1,12 +1,12 @@
-%md-content.user-widget{ng: {controller: 'Users as user'}}
-  %div.logged-user{ng: {show:'user.data.logged'}}
+%div.row{ng: {controller: 'Users as user'}}
+  .logged-user{ng: {show: 'user.data.logged'}}
     %md-card{'md-theme':"indigo",'md-colors':"::{backgroundColor: 'indigo-primary-700'}"}
       %md-card-title
         %md-card-title-media
           %div.md-media-sm.card-media{layout:true,'md-colors':"::{background: 'indigo-accent'}"}
-            %md-icon{'md-svg-icon':"icons/account_circle.svg"}
+            %ng-md-icon{icon:"icons/account_circle.svg"}
         %md-card-title-text
           %span.md-headline {{user.data.username}}
           %span.md-subhead.description This card is colored according the {{theme}} theme</span>
-  %div.login-form{ng: {hide:'user.data.logged'}}
+  .col.s12.login-form{ng: {hide:'user.data.logged'}}
     =render partial: 'users/sessions/new'

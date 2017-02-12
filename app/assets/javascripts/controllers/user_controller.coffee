@@ -1,23 +1,21 @@
-(->
-  UsersController = (Sign, $http)->
+UsersController = (Sign, $http)->
 
-    @login = () =>
-      @data = User.in()
+  @login = () =>
+    @data = User.in()
 
 
-    @checkUser = () =>
-      $http.get(Routes.users_current_path()).then((res) ->
-        @data = res.data
-        @data.username = 'kek'
-      )
+  @checkUser = () =>
+    $http.get(Routes.users_current_path()).then((res) ->
+      @data = res.data
+      @data.username = 'kek'
+    )
 
-    init = () =>
-      @checkUser()
+  init = () =>
+    @checkUser()
 
-    init()
+  init()
 
-    return
+  return
 
-  window.app
-  .controller('Users', ['Sign','$http', UsersController])
-)()
+window.app
+.controller('Users', ['Sign','$http', UsersController])

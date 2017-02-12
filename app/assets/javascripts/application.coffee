@@ -14,13 +14,12 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require tether
-#= require bootstrap
 #= require oxymoron/underscore
 #= require angular
 #= require oxymoron/angular-resource
 #= require oxymoron/angular-ui-router
 #= require oxymoron/ng-notify
-#= require angular-material.min
+#= require materialize-sprockets
 #= require angular-cookies
 #= require angular-animate
 #= require angular-aria
@@ -35,7 +34,7 @@
 
 
 console.log 'loading...'
-window.app = angular.module('app', ['ui.router', 'oxymoron','ngMdIcons','ngAnimate','ngMaterial','uiGmapgoogle-maps']);
+window.app = angular.module('app', ['ui.router', 'oxymoron', 'ngMdIcons', 'ngAnimate', 'uiGmapgoogle-maps']);
 window.app.config((uiGmapGoogleMapApiProvider) ->
   uiGmapGoogleMapApiProvider.configure
     key: vars.maps_api_key
@@ -43,3 +42,5 @@ window.app.config((uiGmapGoogleMapApiProvider) ->
     libraries: 'weather,geometry,visualization'
 )
 console.log 'Loaded! '
+
+$(-> $(".button-collapse").sideNav())

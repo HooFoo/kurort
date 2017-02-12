@@ -2,21 +2,36 @@
   background: none;
   padding: 7px;
 }
-.md-input {
-  color: rgba(255, 255, 255, 0.87) !important;
-  border-color: rgba(255, 255, 255, 0.87) !important;
+
+.indigo {
+  .input-field {
+    color: rgba(255, 255, 255, 0.87);
+    border-color: rgba(255, 255, 255, 0.87);
+
+    label {
+      color: rgba(255, 255, 255, 0.26);
+    }
+
+    abbr {
+      text-decoration: none;
+      border-bottom: none;
+    }
+
+    input {
+      width: 60%;
+      transition: width 0.3s ease-in-out;
+      border-color: rgba(255, 255, 255, 0.87);
+
+      &:focus {
+        width: 100%;
+        border-color: rgba(255, 255, 255, 0.87);
+        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.87);
+        outline: none;
+      }
+    }
+  }
 }
-md-input-container.md-default-theme label, md-input-container label, md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder
-{
-  color: rgba(255, 255, 255, 0.26);
-}
-md-input-container.md-input-focused {
-  width: 100%;
-}
-md-input-container {
-  width: 60%;
-  transition: width 0.3s ease-in-out;
-}
+
 .sign-up-submit {
   width: 60%;
   margin: 0px auto;

@@ -2,40 +2,49 @@
   height: calc(100vh - 56px);
 }
 
-//left menu
-.nav-header {
-  background-color: #3F51B5;
-  border-bottom: 1px solid #3F51B5;
-  flex-shrink: 0;
-  z-index: 2;
+.side-nav li {
+  &.user-panel {
+    line-height: 1.5;
+    border-bottom: 1px solid #5C6BC0;
+    > .indigo {
+      padding-top: 1em;
+      margin-top: -1em;
+      overflow: hidden;
+    }
+  }
+
+  ng-md-icon {
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-block;
+  }
+
+  .collapsible-body {
+    ul {
+      li {
+        a {
+          padding: 0 37.5px 0 45px;
+        }
+      }
+    }
+  }
+
+  .collapsible-header {
+    .less {
+      display: none;
+    }
+
+    &.active {
+      .less {
+        display: inline-block;
+      }
+      .more {
+        display: none;
+      }
+    }
+  }
 }
-.left-menu > li {
-  border-bottom: 1px solid #5C6BC0;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.87);
-  margin: 0;
-  border-radius: 0px;
-  background: #3F51B5;
-}
-ul li {
-  padding: 0;
-  margin-top: 3px;
-  list-style-position: inside;
-}
-.left-menu {
-  list-style: none;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-.nav-item {
-  width: 100%;
-  margin: 0;
-  display: flex;
-}
-.nav-items-icon {
-  margin: 5px 5px;
-}
+
 .nav-subcat {
   background: white;
   padding-left: 10px;
@@ -47,32 +56,30 @@ ul li {
 }
 .adwords-area {
   width: 100%;
-  height: 100%;
   color: rgba(100, 100, 100, 0.2);
   text-align: center;
   vertical-align: middle;
 }
-.search-box {
-  height: 31px !important;
+.search-wrapper {
+  position: relative;
 
-  > md-autocomplete-wrap {
+  input.search-box {
+    padding-left: 26px;
+    width: 250px;
 
-    > md-input-container {
-      margin: 0px;
-      padding: 0px;
-
-      > input {
-
-      }
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.87);
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.87);
+      color: white;
     }
   }
+
+  ng-md-icon.search {
+    position: absolute;
+    top: 11px;
+  }
 }
-.search-wrapper {
-  padding-top: 10px;
-}
-md-icon.search {
-  margin: 5px 5px 2px 11px;
-}
+
 .autocomplete-item {
   color: black;
 }
