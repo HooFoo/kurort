@@ -15,5 +15,5 @@ SearchController = ()->
 
   return
 
-window.app
-.controller('SearchCtrl', SearchController)
+@app
+.controller('SearchController', SearchController)

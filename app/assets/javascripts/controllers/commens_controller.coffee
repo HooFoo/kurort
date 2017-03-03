@@ -4,5 +4,5 @@ CommentsController = (Comment, action)->
 
   return
 
-window.app
-.controller('Comments', CommentsController, ['Comment', 'action'])
+@app
+.controller('CommentsController', CommentsController, ['Comment', 'action'])

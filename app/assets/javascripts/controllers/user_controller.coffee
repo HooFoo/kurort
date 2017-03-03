@@ -17,5 +17,4 @@ UsersController = (Sign, $http)->
 
   return
 
-window.app
-.controller('Users', ['Sign','$http', UsersController])
+@app.controller('UsersController', ['Sign','$http', UsersController])

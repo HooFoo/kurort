@@ -3,4 +3,4 @@ IndexController = ()->
   @index = () =>
     console.log('Yoay!')
 
-window.app.controller('IndexCtrl', IndexController, [])
+@app.controller('IndexController', IndexController, [])
